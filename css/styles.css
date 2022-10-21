@@ -278,18 +278,18 @@ img {
   height: 120px;
 }
 .features .item:nth-child(1)::before {
-  background-image: url(../images/antenna\ 1.svg);
+  background-image: url(../images/antenna.svg);
 }
 
 .features .item:nth-child(2):before {
-  background-image: url(../images/clock\ 1.svg);
+  background-image: url(../images/clock.svg);
 }
 
-.features .item::before {
-  background-image: url(../images/diagram\ 1.svg);
+.features .item:nth-child(3):before {
+  background-image: url(../images/diagram.svg);
 }
-.features .items::before {
-  background-image: url(../images/astronaut\ 1.svg);
+.features .item:nth-child(4):before {
+  background-image: url(../images/astronaut.svg);
 }
 /* Чим ми займаємося */
 
@@ -365,11 +365,25 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--primary-icon-color);
+
   width: 44px;
   height: 44px;
   background-color: var(--white-color);
+  color: var(--primary-icon-color);
+}
+
+.social-icon {
   fill: currentColor;
+}
+
+.social-img:hover,
+.social-img:focus {
+  background-color: var(--accent);
+  color: var(--white-color);
+}
+
+.social-list .item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .members {
@@ -378,6 +392,10 @@ img {
   justify-content: center;
 }
 .members .fon-tim:not(:last-child) {
+  margin-right: 30px;
+}
+
+.social-list.item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -399,13 +417,21 @@ img {
   border: 1px solid var(--primary-icon-color);
   border-radius: 4px;
 
-  fill: currentColor;
   color: var(--primary-icon-color);
   width: 170px;
   height: 92px;
   background-color: var(--white-color);
 }
 
+.client-img {
+  fill: currentColor;
+}
+.client-img:hover,
+.client-img:focus {
+  background-color: var(--white-color);
+  color: var(--accent);
+  border-color: var(--accent);
+}
 /* Нащі роботи */
 
 .filter {
@@ -494,8 +520,13 @@ img {
   background-color: var(--hero-background-color);
 }
 
-.footer-bar {
+.footer-nav {
+  display: flex;
   align-items: baseline;
+}
+
+.footer-bar {
+  margin-right: 70px;
 }
 .title-logo-light {
   color: var(--white-color);
@@ -536,23 +567,50 @@ img {
 .footer-adress .item {
   width: 231px;
 }
+/* social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--primary-icon-color);
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-color);
+  fill: currentColor;
+} */
 
 .social-list-footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.footer-nav {
-  display: flex;
-}
-
 .social-title-footer {
-  /* margin-top: 30px;
-  margin-bottom: 10px; */
-  /* padding-top: 72px; */
-  /* padding-right: 0; */
+  margin-bottom: 20px;
   color: var(--white-color);
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.social-list-footer .social-img {
+  color: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-list-footer .social-icon {
+  fill: currentColor;
+}
+
+.social-list-footer .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-linc-footer:hover {
 }
